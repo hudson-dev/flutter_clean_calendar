@@ -125,7 +125,6 @@ class _CalendarState extends State<Calendar> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        leftArrow ?? Container(),
         Column(
           children: <Widget>[
             todayIcon ?? Container(),
@@ -138,6 +137,7 @@ class _CalendarState extends State<Calendar> {
             ),
           ],
         ),
+        leftArrow ?? Container(),
         rightArrow ?? Container(),
       ],
     );
