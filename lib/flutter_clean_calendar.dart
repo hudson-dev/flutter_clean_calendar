@@ -276,7 +276,7 @@ class _CalendarState extends State<Calendar> {
           margin: EdgeInsets.only(top: 8.0),
           padding: EdgeInsets.all(0),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               SizedBox(width: 40.0),
               Text(
