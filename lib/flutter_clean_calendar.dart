@@ -54,7 +54,7 @@ class Calendar extends StatefulWidget {
     this.eventColor,
     this.eventDoneColor,
     this.initialDate,
-    this.isExpanded = false,
+    this.isExpanded = true,
     this.weekDays = const ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
     this.locale = "en_US",
     this.startOnMonday = false,
@@ -269,7 +269,7 @@ class _CalendarState extends State<Calendar> {
   Widget get expansionButtonRow {
     if (widget.isExpandable) {
       return GestureDetector(
-        onTap: toggleExpanded,
+        onTap: () {},
         child: Container(
           color: widget.bottomBarColor ?? Color.fromRGBO(200, 200, 200, 0.2),
           height: 40,
