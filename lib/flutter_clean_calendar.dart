@@ -74,7 +74,7 @@ class _CalendarState extends State<Calendar> {
   Iterable<DateTime> selectedWeekDays;
   DateTime _selectedDate = DateTime.now();
   String currentMonth;
-  bool isExpanded = false;
+  bool isExpanded = true;
   String displayMonth = "";
   DateTime get selectedDate => _selectedDate;
 
@@ -283,20 +283,20 @@ class _CalendarState extends State<Calendar> {
                 Utils.fullDayFormat(selectedDate),
                 style: widget.bottomBarTextStyle ?? TextStyle(fontSize: 13),
               ),
-              IconButton(
-                onPressed: toggleExpanded,
-                iconSize: 25.0,
-                padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-                icon: isExpanded
-                    ? Icon(
-                        Icons.arrow_drop_up,
-                        color: widget.bottomBarArrowColor ?? Colors.black,
-                      )
-                    : Icon(
-                        Icons.arrow_drop_down,
-                        color: widget.bottomBarArrowColor ?? Colors.black,
-                      ),
-              ),
+              // IconButton(
+              //   onPressed: toggleExpanded,
+              //   iconSize: 25.0,
+              //   padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+              //   icon: isExpanded
+              //       ? Icon(
+              //           Icons.arrow_drop_up,
+              //           color: widget.bottomBarArrowColor ?? Colors.black,
+              //         )
+              //       : Icon(
+              //           Icons.arrow_drop_down,
+              //           color: widget.bottomBarArrowColor ?? Colors.black,
+              //         ),
+              // ),
             ],
           ),
         ),
