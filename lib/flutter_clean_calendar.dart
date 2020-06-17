@@ -133,6 +133,7 @@ class _CalendarState extends State<Calendar> {
               displayMonth,
               style: TextStyle(
                 fontSize: 20.0,
+                fontWeight: FontWeight.w600
               ),
             ),
           ],
@@ -278,7 +279,6 @@ class _CalendarState extends State<Calendar> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(width: 40.0),
               Text(
                 Utils.fullDayFormat(selectedDate),
                 style: widget.bottomBarTextStyle ?? TextStyle(fontSize: 13),
