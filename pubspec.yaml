@@ -11,6 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
   date_utils:
+  skype:
+    git:
+      url: https://github.com/hudson-dev/Elavras
 
 dev_dependencies:
   flutter_test:

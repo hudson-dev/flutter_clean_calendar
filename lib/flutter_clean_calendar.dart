@@ -6,6 +6,7 @@ import './simple_gesture_detector.dart';
 import './calendar_tile.dart';
 import 'package:intl/intl.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:skype/models/event.dart';
 
 typedef DayBuilder(BuildContext context, DateTime day);
 
@@ -23,7 +24,7 @@ class Calendar extends StatefulWidget {
   final DayBuilder dayBuilder;
   final bool hideArrows;
   final bool hideTodayIcon;
-  final Map<DateTime, List> events;
+  final Map<DateTime, List<Events>> events;
   final Color selectedColor;
   final Color todayColor;
   final Color eventColor;
@@ -123,20 +124,24 @@ class _CalendarState extends State<Calendar> {
     }
 
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Column(
           children: <Widget>[
             todayIcon ?? Container(),
-            Text(
-              displayMonth,
-              style: TextStyle(
-                fontSize: 20.0,
-                fontWeight: FontWeight.w600
+            Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: Text(
+                displayMonth,
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.w600
+                ),
               ),
             ),
           ],
         ),
+        Spacer(),
         leftArrow ?? Container(),
         rightArrow ?? Container(),
       ],
