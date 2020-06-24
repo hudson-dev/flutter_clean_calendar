@@ -91,10 +91,7 @@ class CalendarTile extends StatelessWidget {
                             height: 5.0,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: event["isDone"]
-                                  ? eventDoneColor ??
-                                      Theme.of(context).primaryColor
-                                  : eventColor ?? Theme.of(context).accentColor,
+                              color: eventDoneColor
                             ),
                           );
                         }).toList())
